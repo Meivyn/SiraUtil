@@ -70,7 +70,7 @@ namespace SiraUtil.Affinity.Harmony.Generator
             TypeBuilder typeBuilder = _moduleBuilder.DefineType(typeName, TypeAttributes.Public);
 
             Type[]? types = null;
-            if (patch.ArgumentTypes is not null && patch.ArgumentTypes.Length != 0)
+            if (patch.ArgumentTypes is not null)
             {
                 types = patch.ArgumentTypes;
                 ParseSpecialArguments(types, patch.ArgumentVariations);
